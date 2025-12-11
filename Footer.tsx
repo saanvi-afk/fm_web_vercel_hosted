@@ -48,6 +48,9 @@ export default function Footer() {
             <div className="text-center text-gray-600 text-sm font-bold uppercase tracking-widest pt-8 border-t border-neutral-900">
                 &copy; 2025 Formula Manipal. All Rights Reserved.
             </div>
+            <div className="text-center text-gray-600 text-sm font-bold uppercase tracking-widest pt-4">
+                Made by Saanvi Bansal, Krishna Gera and Hriday Shah.
+            </div>
         </footer>
     )
 }

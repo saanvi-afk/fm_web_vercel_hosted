@@ -132,7 +132,7 @@ export default function Landing({ onNavigate }: { onNavigate: (page: string) => 
             FORMULA <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800">MANIPAL</span>
             </h1>
             <p className="text-gray-200 text-lg md:text-2xl max-w-2xl mx-auto mb-10 font-light drop-shadow-md">
-            Pushing the limits of engineering since 2008. We build more than just race cars; we build the future of motorsport.
+            Pushing the limits of engineering since 2008. We build more than just race cars, we build the future of motorsport.
             </p>
         </div>
 
@@ -164,10 +164,10 @@ export default function Landing({ onNavigate }: { onNavigate: (page: string) => 
                   </button>
               </div>
               <div className="relative h-[500px] w-full bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 group">
-                   <div className="absolute inset-0 bg-[url('./team_photo.HEIC')] bg-cover bg-center transition-all duration-700"></div>
+                   <div className="absolute inset-0 bg-[url('./team/team25.jpg')] bg-cover bg-center transition-all duration-700"></div>
                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                    <div className="absolute bottom-8 left-8">
-                       <div className="text-5xl font-black text-white italic">15+</div>
+                       <div className="text-5xl font-black text-white italic">18+</div>
                        <div className="text-red-500 uppercase font-bold tracking-widest">Years of Legacy</div>
                    </div>
               </div>

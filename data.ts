@@ -8,7 +8,7 @@ export const appConfig = {
     },
     sponsorship: {
         // Link to your external form (Google Form, Typeform, etc.)
-        contactFormUrl: "https://forms.gle/1RQW8XKU8GPceBqi7"
+        contactFormUrl: "https://forms.gle/KQ7KqYaEPTQUBWtT8"
     },
     media: {
         // URL for the previous years' magazine archive site
@@ -25,6 +25,7 @@ export interface Member {
   image: string;
   socials: {
     linkedin?: string;
+    phonenumber?:number;
   };
 }
 
@@ -108,7 +109,7 @@ export interface Sponsor {
 // Manually defined seasons list
 export const seasons: string[] = [
     "2025-2026","2024-2025", "2023-2024", 
-    "2022-2023", "2021-2022", "2020-2021", "2019-2020",
+    "2022-2023", "2021-2022", "2020-2021", "2019-2020","2019e-2020e",
     "2018-2019", "2017-2018", "2016-2017",
     "2014-2015", "2013-2014","2011-2012", "2010-2011",
     "2009-2010", "2008-2009"
@@ -163,7 +164,7 @@ const defaultAchievementTemplate: SeasonAchievement = {
     rank: "Participant",
     highlight: "Successful Event Completion",
     points: "300 Points",
-    teamPhoto: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop",
+    teamPhoto: "./team/placeholder.jpeg",
     awards: [
         { title: "Overall Rank", value: "Participant" },
         { title: "Design Event", value: "Finalist" },
@@ -200,16 +201,16 @@ export const database: Record<string, SeasonData> = {
             rank: "Season In Progress",
             highlight: "Developing 4WD",
             points: "N/A",
-            teamPhoto: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team25.jpg",
             awards: [
                 { title: "Current Status", value: "Manufacturing Phase" }
             ]
         },
         members: {
             board: [
-                { id: 0, name: "Amogha Rao", role: "Team Captain", department: "Management", quote: "Pushing boundaries.", image: "./fm_sr/amogha.jpg", socials: { linkedin: "https://www.linkedin.com/in/amogha-rao-ar/" } },
-                { id: 1, name: "Vandana Malhotra", role: "Mechanical Head", department: "Mechanical", quote: "High voltage, high performance.", image: "./fm_sr/vandana.jpg", socials: { linkedin: "https://www.linkedin.com/in/vandana-malhotra-517999250/" } },
-                { id: 2, name: "Krit Gupta", role: "Electrical Head", department: "Electrical", quote: "Grip is everything.", image: "./fm_sr/krit.jpg", socials: { linkedin: "https://www.linkedin.com/in/krit-gupta-a939a1284/" } }
+                { id: 0, name: "Amogha Rao", role: "Team Captain", department: "Management", quote: "", image: "./fm_sr/amogha.jpg", socials: { linkedin: "https://www.linkedin.com/in/amogha-rao-ar/",phonenumber:+919986507801 } },
+                { id: 1, name: "Vandana Malhotra", role: "Mechanical Head", department: "Mechanical", quote: "", image: "./fm_sr/vandana.jpg", socials: { linkedin: "https://www.linkedin.com/in/vandana-malhotra-517999250/", phonenumber : +917700904153} },
+                { id: 2, name: "Krit Gupta", role: "Electrical Head", department: "Electrical", quote: "", image: "./fm_sr/krit.jpg", socials: { linkedin: "https://www.linkedin.com/in/krit-gupta-a939a1284/", phonenumber :+918073599506 } }
             ],
             core: [
                 { id: 0, name: "Ratish A.M", role: "Structures Lead", department: "Structures", quote: "", image: "./fm_sr/ratish.jpg", socials: { linkedin: "https://www.linkedin.com/in/ratish-a-m-419996219/" } },
@@ -231,22 +232,22 @@ export const database: Record<string, SeasonData> = {
                 { id: 6, name: "Shivam Goyal", role: "", department: "Aerodynamics & Composites", quote: "Junior Engineer", image: "./fm_jr/shivam.jpg", socials: { linkedin: "https://www.linkedin.com/in/shivam-goyal-78b415321/" } },
                 { id: 7, name: "Mehak Ali", role: "", department: "Aerodynamics & Composites", quote: "Junior Engineer", image: "./fm_sr/place.jpeg", socials: { linkedin: "hhttps://www.linkedin.com/in/mehak-ali-1bbb15380/?trk=contact-info" } },
                 { id: 8, name: "ADWAIT KUSHWAHA", role: "", department: "Aerodynamics & Composites", quote: "Junior Engineer", image: "./fm_sr/place.jpeg", socials: { linkedin: "" } },
-                { id: 9, name: "Vishnu", role: "", department: "Vehicle Dynamics", quote: "NA", image: "./fm_sr/vishnu.jpg", socials: { linkedin: "" } },
+                { id: 9, name: "Vishnu", role: "", department: "Vehicle Dynamics", quote: "", image: "./fm_sr/vishnu.jpg", socials: { linkedin: "" } },
                 { id: 10, name: "Rishaan Nair", role: "", department: "Vehicle Dynamics", quote: "Junior Engineer", image: "./fm_jr/rishaam.jpg", socials: { linkedin: "https://www.linkedin.com/in/rishaan-nair-b79316370/" } },
                 { id: 11, name: "Chinmay Ranade", role: "", department: "Vehicle Dynamics", quote: "Junior Engineer", image: "./fm_jr/chinmay.jpg", socials: { linkedin: "https://www.linkedin.com/in/chinmay-ranade-40b10920b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" } },
                 { id: 12, name: "Jayden Savio Pereira", role: "", department: "Vehicle Dynamics", quote: "Junior Engineer", image: "./fm_jr/jayden.jpg", socials: { linkedin: "https://www.linkedin.com/in/jayden-pereira-778889328/" } },
                 { id: 13, name: "ABHIMANYU BHARGAVA", role: "", department: "Vehicle Dynamics", quote: "Junior Engineer", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/abhimanyu-niranjan-bhargava-2a81082a1/" } },
-                { id: 14, name: "SHADANAN S", role: "", department: "Transmission", quote: "NA", image: "./fm_sr/shadanan.jpg", socials: { linkedin: "https://www.linkedin.com/in/devadathan-r-menon-705440360/" } },
+                { id: 14, name: "SHADANAN S", role: "", department: "Transmission", quote: "", image: "./fm_sr/shadanan.jpg", socials: { linkedin: "https://www.linkedin.com/in/devadathan-r-menon-705440360/" } },
                 { id: 15, name: "Devadathan R Menon", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/dev.jpg", socials: { linkedin: "https://www.linkedin.com/in/devadathan-r-menon-705440360/" } },
                 { id: 16, name: "Saksham Agrawal", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/saksham.jpg", socials: { linkedin: "https://www.linkedin.com/in/saksham-agrawal-462698311/" } },
                 { id: 17, name: "Nitha B Venugopal", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/nitha.jpg", socials: { linkedin: "https://www.linkedin.com/in/nitha-b-6329742b8/" } },
-                { id: 18, name: "Ishan Panchal", role: "", department: "E-Powertrain", quote: "NA", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/ishan-panchal-b839672a9/" } },
+                { id: 18, name: "Ishan Panchal", role: "", department: "E-Powertrain", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/ishan-panchal-b839672a9/" } },
                 { id: 19, name: "raghunandhan prakash", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_sr/raghu.jpg", socials: { linkedin: "https://www.linkedin.com/in/raghunandhan-prakash-134867254/" } },
                 { id: 20, name: "ANUSHA SAMAL", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_jr/anusha.jpg", socials: { linkedin: "https://in.linkedin.com/in/anusha-samal-2a8296256" } },
                 { id: 21, name: "ADIT JINDAL", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_jr/adit.jpg", socials: { linkedin: "https://www.linkedin.com/in/adit-jindal-58098b286/" } },
                 { id: 22, name: "Nandita Neelakantan", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_jr/nandita.jpg", socials: { linkedin: "https://www.linkedin.com/in/nandita-neelakantan-917a08370/" } },
-                { id: 23, name: "SUMIR BALAKRISHNAN", role: "", department: "Electronics & Control Systems ", quote: "NA", image: "./fm_sr/sumir.jpg", socials: { linkedin: "https://www.linkedin.com/in/sumir-balakrishnan-809890244/" } },
-                { id: 24, name: "ANISTON DA SILVA", role: "", department: "Electronics & Control Systems ", quote: "NA", image: "./fm_sr/aniston.jpg", socials: { linkedin: "https://www.linkedin.com/in/aniston-da-silva-47b1b61b9/" } },
+                { id: 23, name: "SUMIR BALAKRISHNAN", role: "", department: "Electronics & Control Systems ", quote: "", image: "./fm_sr/sumir.jpg", socials: { linkedin: "https://www.linkedin.com/in/sumir-balakrishnan-809890244/" } },
+                { id: 24, name: "ANISTON DA SILVA", role: "", department: "Electronics & Control Systems ", quote: "", image: "./fm_sr/aniston.jpg", socials: { linkedin: "https://www.linkedin.com/in/aniston-da-silva-47b1b61b9/" } },
                 { id: 25, name: "PALAK JOSHI", role: "", department: "AElectronics & Control Systems ", quote: "Junior Engineer", image: "./fm_jr/palak.jpg", socials: { linkedin: "https://www.linkedin.com/in/palak-joshi-b34585323/" } },
                 { id: 26, name: "VEDIKA JANGLE", role: "", department: "Electronics & Control Systems ", quote: "Junior Engineer", image: "./fm_jr/vedika.jpg", socials: { linkedin: "https://www.linkedin.com/in/vedika-jangle-b57845320/" } },
                 { id: 27, name: "Kritagya Tripathi", role: "", department: "Electronics & Control Systems ", quote: "Junior Engineer", image: "./fm_jr/kritagya.jpg", socials: { linkedin: "https://www.linkedin.com/in/kritagya-tripathi-b530a5212/" } },
@@ -303,7 +304,7 @@ export const database: Record<string, SeasonData> = {
         achievements: {
             rank: "3rd in Formula Bharat",
             highlight: "First EV Car",
-            points: "320",
+            points: "3rd in Engineering Design",
             teamPhoto: "./team/team24.jpg",
             awards: [
                 { title: "Overall Rank", value: "#3" },
@@ -323,17 +324,17 @@ export const database: Record<string, SeasonData> = {
                 { id: 1, name: "Piyush Ghanti", role: "Composites Lead", department: "Mechanical", quote: "", image: "./Team member Photos '24/ghanti.jpg", socials: { linkedin: "https://www.linkedin.com/in/piyushganti/" } },
                 { id: 2, name: "Abhimanyu Garg", role: "Vehicle Dynamics Lead", department: "Mechanical", quote: "", image: "./Team member Photos '24/abhimanyu.jpg", socials: { linkedin: "https://www.linkedin.com/in/abhimanyu-garg-93ab09308/" } },
                 { id: 3, name: "Shiladitya Sanyal", role: "Transmission Lead", department: "Mechanical", quote: "", image: "./Team member Photos '24/laditya.jpg", socials: { linkedin: "https://www.linkedin.com/in/shiladityasanyal/" } },
-                { id: 4, name: "Arsh Singh", role: "E-Powertrain Lead", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/arsh-singh-4953a7249/" } },
+                { id: 4, name: "Arsh Singh", role: "E-Powertrain Lead", department: "Mechanical", quote: "", image: "./Team member Photos '24/arsh.jpeg", socials: { linkedin: "https://www.linkedin.com/in/arsh-singh-4953a7249/" } },
             ],
             general: [
                 { id: 0, name: "Shrinidhi Deshmukh", role: "Structures", department: "Mechanical", quote: "", image: "./Team member Photos '24/srinidhi.jpg", socials: { linkedin: "https://www.linkedin.com/in/shrinidhi-deshmukh-511a88282/" } },
-                { id: 1, name: "Ananya Raulkar", role: "Vehicle Dyanmics", department: "Vehicle Dyanmics", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/ananya-raulkar/" } },
+                { id: 1, name: "Ananya Raulkar", role: "Vehicle Dyanmics", department: "Vehicle Dyanmics", quote: "", image: "./Team member Photos '24/ananya.jpg", socials: { linkedin: "https://www.linkedin.com/in/ananya-raulkar/" } },
                 { id: 2, name: "Chithrinesh CV", role: "Electronics and Controls", department: "Electronics and Controls", quote: "", image: "./Team member Photos '24/chitranesh.jpg", socials: { linkedin: "https://www.linkedin.com/in/c-v-chithrinesh-b53b9529a/" } },
                 { id: 3, name: "Jishnu Chattoraj", role: "Electronics and Controls", department: "Electronics and Controls", quote: "", image: "./Team member Photos '24/jishnu.jpg", socials: { linkedin: "https://www.linkedin.com/in/jishnu-chattoraj-75a72b301/" } },
                 { id: 4, name: "Rishit Singh", role: "Electronics and Controls", department: "Electronics and Controls", quote: "", image: "./Team member Photos '24/rishit.jpeg", socials: { linkedin: "https://www.linkedin.com/in/rishit-singh-716019280/" } },
                 { id: 5, name: "Vaibhav Agarwal", role: "Electronics and Controls", department: "Electronics and Controls", quote: "", image: "./Team member Photos '24/vaibhav.jpg", socials: { linkedin: "https://www.linkedin.com/in/vaibhav-agarwal-a5a5ab242/" } },
-                { id: 6, name: "Soham Bose", role: "Driverless", department: "Driverless", quote: "", image: "./Team member Photos '24/soham.jpeg", socials: { linkedin: "https://www.linkedin.com/in/soham-bose-24672528b/" } },
-                { id: 7, name: "Rachel Koshy", role: "Management", department: "Management", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/rachel-koshy-257297260/" } },
+                { id: 6, name: "Soham Bose", role: "Driverless", department: "Driverless", quote: "", image: "./Team member Photos '24/soham.jpg", socials: { linkedin: "https://www.linkedin.com/in/soham-bose-24672528b/" } },
+                { id: 7, name: "Rachel Koshy", role: "Management", department: "Management", quote: "", image: "./Team member Photos '24/rachel.jpeg", socials: { linkedin: "https://www.linkedin.com/in/rachel-koshy-257297260/" } },
                 { id: 8, name: "Keerthana Mukesh", role: "Management", department: "Management", quote: "", image: "./Team member Photos '24/keerthana.jpeg", socials: { linkedin: "#" } },
             ]
         },
@@ -351,7 +352,7 @@ export const database: Record<string, SeasonData> = {
             induction:'56Nm (torque)',
             powerOutput:'63kW',
             image:'./cars/co1.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FM24 embodied our team's engineering prowess, powered by a Honda CBR 600RR PC37 (2003) engine yielding 63kW and 56Nm of torque in a 229kg tubular spaceframe chassis of AISI 1018 steel. With CFRP bodywork, double wishbone suspension (front pullrod, rear pushrod), Drexler LSD, and Hoosier slicks, it delivered razor-sharp handling. Motec ECU and custom DAQ backed its 4th overall at Formula Bharat, plus 1st in Cost & Manufacturing and 4th in Engineering Design—proving efficient innovation wins races.",
             detailedSpecs: {
                 chassis: "Tubular Spaceframe, Manufactured using AISI 1018 STEEL",
                 body: "CFRP fabricated by Resin Transfer Infusion",
@@ -365,8 +366,8 @@ export const database: Record<string, SeasonData> = {
     },  
         achievements: {
             rank: "4th in Formula Bharat",
-            highlight: "First in Cost & Manufacturing",
-            points: "320",
+            highlight: "1st in Cost & Manufacturing",
+            points: "4th in Business Plan",
             teamPhoto: "./team/team23.jpg",
             awards: [
                 { title: "Overall Rank", value: "#4" },
@@ -416,7 +417,7 @@ export const database: Record<string, SeasonData> = {
             induction:'53 Nm (torque)',
             powerOutput:'79 BHP',
             image:'./cars/fm23.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description:"The FM23 showcased our team's relentless drive for performance, fueled by a Honda CBR 600RR PC37 (2003) engine pumping 79 BHP and 57Nm of torque through a robust AISI 1018 steel tubular spaceframe. Clad in resin-infused CFRP bodywork, it gripped tracks with double wishbone suspension (front pullrod, rear pushrod), adjustable Ackermann, Drexler LSD (31Nm preload), and Hoosier R25B slicks on Keizer rims.",
             detailedSpecs: {
                 chassis: "Tubular Spaceframe, Manufactured using AISI 1018 STEEL",
                 body: "CFRP fabricated by Resin Transfer Infusion",
@@ -429,51 +430,51 @@ export const database: Record<string, SeasonData> = {
         }
     },  
         achievements: {
-            rank: "5th in Formula Bharat",
-            highlight: "6th in Cost & Manufacturing in FSA",
-            points: "",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            rank: "12th in FS Austria",
+            highlight: "6th in Cost & Manufacturing",
+            points: "10th in Skidpad",
+            teamPhoto: "./team/team22.jpg",
             awards: [
-                { title: "Overall Formula Bharat Rank", value: "#5" },
-                { title: "Cost & Manufacturing Formula Bharat", value: "#2" },
-                { title: "Cost & Manufacturing Formula Student Austria", value: "#6" },
-                { title: "Acceleration Formula Student Austria", value: "#7" },
+                { title: "Cost & Manufacturing", value: "#6" },
+                { title: "Acceleration ", value: "#7" },
+                { title: "Business Plan ", value: "#18" },
+
             ]
         },
         members: {
             board: [
-                { id: 0, name: "Aniruddh Ande", role: "Team Manager", department: "Management", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Aniruddh&backgroundColor=b6e3f4", socials: { linkedin: "#" } },
-                { id: 1, name: "Samar Singh Jakhar", role: "CV Team Leader", department: "Management", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Samar&backgroundColor=b6e3f4", socials: { linkedin: "#" } },
-                { id: 2, name: "Arya Bobade", role: "EV Team Leader", department: "Management", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Arya&backgroundColor=b6e3f4", socials: { linkedin: "#" } },
+                { id: 0, name: "Aniruddh Ande", role: "Team Manager", department: "Management", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                { id: 1, name: "Samar Singh Jakhar", role: "CV Team Leader", department: "Management", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                { id: 2, name: "Arya Bobade", role: "EV Team Leader", department: "Management", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
             ],
 
             core: [
-                { id: 0, name: "Pranav Sudheer", role: "Structures Head", department: "Mechanical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Pranav&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/sudheerpranav/" } },
-                { id: 1, name: "Shashank Kondapi", role: "Aerodynamics & Composites Head", department: "Mechanical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Shashank&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/shashankkondapi/" } },
-                { id: 2, name: "Rhik Banerjee", role: "E-Powertrain Head", department: "Electrical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rhik&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/rhik-banerjee-50625b21b/" } },
-                { id: 3, name: "Rohan Derek Mendonca", role: "Engine Head", department: "Mechanical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rohan&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/randomdiskmemory/" } },
-                { id: 4, name: "Aamann Patel", role: "CV Vehicle Dynamics Head", department: "Mechanical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Aamann&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/aamann-patel-52955222a/" } },
-                { id: 5, name: "Mahic Shah", role: "Electronics Head", department: "Electrical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mahic&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/mahicshah/" } },
-                { id: 6, name: "Pellakuru Maneesh", role: "Transmission Head", department: "Mechanical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Maneesh&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/maneesh-pellakuru/" } },
-                { id: 7, name: "Allen Thambi", role: "EV Vehicle Dynamics Head", department: "Electrical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Allen&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/allen-thambi-182750271/" } },
-                { id: 8, name: "Abhay Hari", role: "Controls Head", department: "Electrical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Abhay&backgroundColor=b6e3f4", socials: { linkedin: "#" } },
-                { id: 9, name: "Yash Bijalwan", role: "Driverless Head", department: "Driverless", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=YashBijalwan&backgroundColor=b6e3f4", socials: { linkedin: "#" } },
-                { id: 10, name: "Sohon Kurian", role: "Management Head", department: "Management", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sohon&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/sohonkurian/" } }
+                { id: 0, name: "Pranav Sudheer", role: "Structures Head", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sudheerpranav/" } },
+                { id: 1, name: "Shashank Kondapi", role: "Aerodynamics & Composites Head", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/shashankkondapi/" } },
+                { id: 2, name: "Rhik Banerjee", role: "E-Powertrain Head", department: "Electrical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/rhik-banerjee-50625b21b/" } },
+                { id: 3, name: "Rohan Derek Mendonca", role: "Engine Head", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/randomdiskmemory/" } },
+                { id: 4, name: "Aamann Patel", role: "CV Vehicle Dynamics Head", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/aamann-patel-52955222a/" } },
+                { id: 5, name: "Mahic Shah", role: "Electronics Head", department: "Electrical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/mahicshah/" } },
+                { id: 6, name: "Pellakuru Maneesh", role: "Transmission Head", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/maneesh-pellakuru/" } },
+                { id: 7, name: "Allen Thambi", role: "EV Vehicle Dynamics Head", department: "Electrical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/allen-thambi-182750271/" } },
+                { id: 8, name: "Abhay Hari", role: "Controls Head", department: "Electrical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                { id: 9, name: "Yash Bijalwan", role: "Driverless Head", department: "Driverless", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                { id: 10, name: "Sohon Kurian", role: "Management Head", department: "Management", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sohonkurian/" } }
             ],
 
           general: [
-                { id: 0, name: "Aditya Jain", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=AdityaJ&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/dipsiteadi/" } },
-                { id: 1, name: "Arjun Aravind", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=ArjunA&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/arjun-aravind-463608209/" } },
-                { id: 2, name: "Bharadwaj Ongole", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Bharadwaj&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/sai-bharadwaj-ongole-84a46b143/" } },
-                { id: 3, name: "Uddhav Mahendra Pratap", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Uddhav&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/uddhav-mahendra-pratap-46125621b/" } },
-                { id: 4, name: "V.Kr.Venkatachalam", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Venkatachalam&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/venkatachalam-krishnan-615b84245/" } },
-                { id: 5, name: "Arnav Dabak", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Arnav&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/arnav-dabak/" } },
-                { id: 6, name: "Ayush Lokare", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ayush&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/ayushlokare6942/" } },
-                { id: 7, name: "Bratish Saha", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Bratish&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/bratish-saha5279/" } },
-                { id: 8, name: "Hassan Mohd Esa Lashkari", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Hassan&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/hassan-lashkari8251/" } },
-                { id: 9, name: "M Laxmen", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Laxmen&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/laxmen-murali-/" } },
-                { id: 10, name: "Paramjit Singh", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Paramjit&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/paramjit-singh/" } },
-                { id: 11, name: "Parth Behede", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=ParthB&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/parth-behede/" } }
+                { id: 0, name: "Aditya Jain", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/dipsiteadi/" } },
+                { id: 1, name: "Arjun Aravind", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/arjun-aravind-463608209/" } },
+                { id: 2, name: "Bharadwaj Ongole", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sai-bharadwaj-ongole-84a46b143/" } },
+                { id: 3, name: "Uddhav Mahendra Pratap", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/uddhav-mahendra-pratap-46125621b/" } },
+                { id: 4, name: "V.Kr.Venkatachalam", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/venkatachalam-krishnan-615b84245/" } },
+                { id: 5, name: "Arnav Dabak", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/arnav-dabak/" } },
+                { id: 6, name: "Ayush Lokare", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/ayushlokare6942/" } },
+                { id: 7, name: "Bratish Saha", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/bratish-saha5279/" } },
+                { id: 8, name: "Hassan Mohd Esa Lashkari", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/hassan-lashkari8251/" } },
+                { id: 9, name: "M Laxmen", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/laxmen-murali-/" } },
+                { id: 10, name: "Paramjit Singh", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/paramjit-singh/" } },
+                { id: 11, name: "Parth Behede", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/parth-behede/" } }
                 ]
         },
         hasCar:true
@@ -490,7 +491,7 @@ export const database: Record<string, SeasonData> = {
             induction:'53 Nm (torque)',
             powerOutput:'79 BHP',
             image:'./cars/fm21.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FMXX1 exemplified our team's global ambitions, driven by a Honda CBR 600RR PC37 (2003) engine unleashing 79 BHP and 53Nm of torque in a durable AISI 1018 steel tubular spaceframe. Wrapped in vacuum-bagged carbon fiber bodywork, it conquered corners via double wishbone suspension (front pullrod, rear pushrod), adjustable Ackermann, versatile Drexler LSD with electropneumatic shifting, and Hoosier R25B slicks on Keizer rims—bolstered by titanium driveshafts and Motec M400 ECU with custom DAQ.",
             detailedSpecs: {
                 chassis: "Tubular Spaceframe, Manufactured using AISI 1018 STEEL",
                 body: "Vacuum bagged carbon fibre bodywork",
@@ -505,10 +506,12 @@ export const database: Record<string, SeasonData> = {
         achievements: {
             rank: "19th in Formula Student Germany",
             highlight: "6th in Business Plan presentation in FSG",
-            points: "",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            points: "5th in Formula Bharat",
+            teamPhoto: "./team/team21.jpeg",
             awards: [
                 { title: "Overall Formula Student Germany Rank", value: "#19" },
+                { title: "Overall Formula Bharat Rank", value: "#5" },
+                { title: "Cost & Manufacturing Formula Bharat", value: "#2" },
                 { title: "Business Plan Presentation", value: "#6" },
                 { title: "Cost & Manufacturing", value: "#17" },
                 { title: "Engineering Design", value: "#22" },
@@ -523,26 +526,26 @@ export const database: Record<string, SeasonData> = {
             core: [
                 { id: 0, name: "Vismay Vivekanand Nayak", role: "Structures Head", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/vismay-nayak-846847190/" } },
                 { id: 1, name: "Satya Sai Nithin Datla", role: "Aerodynamics & Composites Head", department: "Mechanical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/satya-sai-nithin-datla/" } },
-                { id: 2, name: "Parth Shingte", role: "E-Powertrain Head", department: "Electrical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/parth-shingte-3b336619a/" } },
-                { id: 3, name: "Kuna Abhinav", role: "Powertrain Head", department: "Electrical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/kuna-abhinav-9906451b2/" } },
-                { id: 4, name: "Yashaarth Kaushik", role: "Vehicle Dyanmics Head", department: "Mechanical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/yashaarth-kaushik-91346318a/" } },
-                { id: 5, name: "Krishnapal Jadeja", role: "Electronics and Controls Head", department: "Electrical", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/saksham-singh-khatkar-ab79a2230/" } },
-                { id: 6, name: "Ameya Nitin Phadnis", role: "Driverless Head", department: "Driverless", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/anaypatil/" } },
-                { id: 7, name: "Nishanth Nagesh Shetty", role: "Management Head", department: "Management", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4", socials: { linkedin: "#" } },
+                { id: 2, name: "Parth Shingte", role: "E-Powertrain Head", department: "Electrical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/parth-shingte-3b336619a/" } },
+                { id: 3, name: "Kuna Abhinav", role: "Powertrain Head", department: "Electrical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/kuna-abhinav-9906451b2/" } },
+                { id: 4, name: "Yashaarth Kaushik", role: "Vehicle Dyanmics Head", department: "Mechanical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/yashaarth-kaushik-91346318a/" } },
+                { id: 5, name: "Krishnapal Jadeja", role: "Electronics and Controls Head", department: "Electrical", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/saksham-singh-khatkar-ab79a2230/" } },
+                { id: 6, name: "Ameya Nitin Phadnis", role: "Driverless Head", department: "Driverless", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/anaypatil/" } },
+                { id: 7, name: "Nishanth Nagesh Shetty", role: "Management Head", department: "Management", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
             ],
           general: [
-                { id: 0, name: "Aditya Jain", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=AdityaJ&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/dipsiteadi/" } },
-                { id: 1, name: "Arjun Aravind", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=ArjunA&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/arjun-aravind-463608209/" } },
-                { id: 2, name: "Bharadwaj Ongole", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Bharadwaj&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/sai-bharadwaj-ongole-84a46b143/" } },
-                { id: 3, name: "Uddhav Mahendra Pratap", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Uddhav&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/uddhav-mahendra-pratap-46125621b/" } },
-                { id: 4, name: "V.Kr.Venkatachalam", role: "", department: "Combustion", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Venkatachalam&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/venkatachalam-krishnan-615b84245/" } },
-                { id: 5, name: "Arnav Dabak", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Arnav&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/arnav-dabak/" } },
-                { id: 6, name: "Ayush Lokare", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ayush&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/ayushlokare6942/" } },
-                { id: 7, name: "Bratish Saha", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Bratish&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/bratish-saha5279/" } },
-                { id: 8, name: "Hassan Mohd Esa Lashkari", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Hassan&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/hassan-lashkari8251/" } },
-                { id: 9, name: "M Laxmen", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Laxmen&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/laxmen-murali-/" } },
-                { id: 10, name: "Paramjit Singh", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Paramjit&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/paramjit-singh/" } },
-                { id: 11, name: "Parth Behede", role: "", department: "Electric", quote: "", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=ParthB&backgroundColor=b6e3f4", socials: { linkedin: "https://www.linkedin.com/in/parth-behede/" } }
+                { id: 0, name: "Aditya Jain", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/dipsiteadi/" } },
+                { id: 1, name: "Arjun Aravind", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/arjun-aravind-463608209/" } },
+                { id: 2, name: "Bharadwaj Ongole", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sai-bharadwaj-ongole-84a46b143/" } },
+                { id: 3, name: "Uddhav Mahendra Pratap", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/uddhav-mahendra-pratap-46125621b/" } },
+                { id: 4, name: "V.Kr.Venkatachalam", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/venkatachalam-krishnan-615b84245/" } },
+                { id: 5, name: "Arnav Dabak", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/arnav-dabak/" } },
+                { id: 6, name: "Ayush Lokare", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/ayushlokare6942/" } },
+                { id: 7, name: "Bratish Saha", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/bratish-saha5279/" } },
+                { id: 8, name: "Hassan Mohd Esa Lashkari", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/hassan-lashkari8251/" } },
+                { id: 9, name: "M Laxmen", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/laxmen-murali-/" } },
+                { id: 10, name: "Paramjit Singh", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/paramjit-singh/" } },
+                { id: 11, name: "Parth Behede", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/parth-behede/" } }
                 ]
         },
         hasCar:true
@@ -608,15 +611,133 @@ export const database: Record<string, SeasonData> = {
         hasCar:false
     },
     "2019-2020": {
-        car: { ...defaultCarTemplate, name: "FM20", type: "CV", engine: "KTM 390", displacement: "373cc", powerOutput: "43 HP" },
-        achievements: { ...defaultAchievementTemplate, rank: "Rank #5", highlight: "Best Indian Team" },
-        members: { board: sampleBoard, core: sampleCore, general: sampleGeneral }
+        car: {
+            name: "FM20",
+            competitionCode:"02",
+            type:"CV",
+            customStat1: { label: "Power", value: "79 BHP"},
+            customStat2: { label: "Torque", value: "53 Nm" },
+            engine: "Honda CBR 600RR, PC 40 ",
+            displacement:"",
+            induction:'',
+            powerOutput:'',
+            image:'./cars/fm20.png',
+            description: "The FM20 marked our team's evolution in precision engineering, propelled by a Honda CBR 600RR PC40 engine delivering 79 BHP and 53Nm of torque within a TIG-welded AISI 1018 steel tubular spaceframe. Enveloped in vacuum-bagged carbon fiber bodywork, it dominated dynamics with independent double-wishbone pull-rod suspension on Öhlins dampers, adjustable Ackermann, versatile Drexler LSD with electropneumatic shifting and titanium driveshafts, plus Hoosier R25B slicks on Keizer rims.",
+            detailedSpecs: {
+                chassis: "Steel tubular space frame chassis manufactured from AISI 1018 round steel tubing and TIG-welded using ER70-S6 low-carbon alloy steel filler.",
+                body: "Vacuum bagged carbon fibre bodywork",
+                brakes: "Front Brakes: ISR4-piston calipers, Rear Brakes: AP Racing 2-piston calipers",
+                tires: "Keizer 10 aluminium wheel rims with aluminium 7075 self-designed wheel centres fitted with Hoosier R25B slicks.",
+                transmission: "Drexler limited-slip differential with three torque-biasing ratio pairs, electropneumatic shifting and clutching, and a 30:11 final drive ratio with Grade 5 titanium driveshafts.",
+                electronics: "MoTeC M400 ECU with NI myRIO and Mini M4 STM32 for data acquisition and telemetry, featuring an RPM LED display with auto-upshift and auto-clutch downshift driver aids.",
+                suspension: "Independent double-wishbone pull-rod front and rear suspension with Öhlins dampers and adjustable Ackermann geometry.",
+                ergonomics: "Fixed seat and steering wheel with fore-aft pedal adjustment of 25 mm, wet lay-up carbon seat with padded lumbar and knee protection, 60 mm Ethafoam head support, and 210-degree side visibility.",
+        }
+    },  
+        achievements: {
+            rank: "8th in Formula Bharat",
+            highlight: "10 in Cost Event in Formula Bharat",
+            points: "9 in Business Plan Presentation",
+            teamPhoto: "./team/team19.jpeg",
+            awards: [
+                { title: "Overall Formula Bharat", value: "#9" },
+                { title: "Engineering Design", value: "#21" },
+            ]
+        },
+        members: {
+          board: [],
+          core: [],
+          general: [
+                    { id: 0, name: "Sujay Bhaumik", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sujay-bhaumik-d12/" } },
+                    { id: 1, name: "Aditya Shridhar", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/aditya-shridhar/" } },
+                    { id: 2, name: "Sai Yashwanth Kandukuri", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sai-yashwanth-kandukuri-17b40916a/" } },
+                    { id: 3, name: "Nishant Yala", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/nishant-yala-bb594b166/" } },
+                    { id: 4, name: "Aditya Shankar", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 5, name: "Vyom Kumar", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/vyom-kumar-267527190/" } },
+                    { id: 6, name: "G S Mounik", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/g-s-mounik-801185182/" } },
+                    { id: 7, name: "Gourav Kumar Singh", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/gourav-kumar-singh-624168191/" } },
+                    { id: 8, name: "Jomin Joseph Karukakalam", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 9, name: "Aman Gupta", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/aman-ab-gupta/" } },
+                    { id: 10, name: "Dhawal Samel", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/dhawal-samel-636941188/" } },
+                    { id: 11, name: "Pranav Pawan Agrawal", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 12, name: "Naman Agarwal", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/naman-agarwal-45815a181/" } },
+                    { id: 13, name: "Shreyansh Goenka", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/shreyansh-goenka-469b89b3/" } },
+                    { id: 14, name: "Kashyap Bagri", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/kashyap-bagri-bb9470171/" } },
+                    { id: 15, name: "Siddhartha Singh", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/siddhartha-singh-02334a34/" } },
+                    { id: 16, name: "Darsh Manoj Choksi", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/darsh-choksi-7521a3144/" } },
+                    { id: 17, name: "Sarthak Naithani", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sarthak-naithani-a610b6126/" } },
+                    { id: 18, name: "Kevin Varghese Philip", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/kevin-philip-601570112/" } },
+                    { id: 19, name: "Afraz K. Ashik", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/afraz-ashik-22558915a/" } },
+                    { id: 20, name: "Preyaan Gupta", role: "", department: "Combustion", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/preyaan-gupta-0654a5193/" } }
+                ]
+            },
+    },
+    "2019e-2020e": {
+        car: {
+            name: "FM20e",
+            competitionCode: "E03",
+            type: "EV",
+            customStat1: { label: "Voltage", value: "600V" },
+            customStat2: { label: "Weight", value: "255kg" },
+            motor: "Liquid Cooled EMRAX 208 HV",
+            battery: "6.6 kWh Custom Pack",
+            voltage: "600V MAX",
+            image:'./cars/fm20e.jpeg',
+            description: "The FM20e ignited our team's electric era as our first EV, unleashing 80 kW and 140 Nm from a liquid-cooled EMRAX 208 motor within a 255kg TIG-welded AISI 1018 steel tubular spaceframe. Powered by a 7.7 kWh air-cooled Molicel P42A pack (352.8V nominal, 600V max), it sliced through corners with vacuum-bagged carbon bodywork, double wishbone pullrod suspension on adjustable Ackermann, epicyclic 4.5:1 planetary transmission with titanium half-shafts,",
+            detailedSpecs: {
+                chassis: "Steel tubular space frame chassis manufactured from AISI 1018 round steel tubing and TIG-welded using ER70-S6 low-carbon alloy steel filler.",
+                body: "Vacuum bagged carbon fibre bodywork",
+                powertrain: "Water-cooled EMRAX 208 producing 80 kW peak power and 140 Nm peak torque, paired with an air-cooled accumulator of 84 EPS cells in an 84S1P configuration delivering up to 352.8 V and 7.7 kWh capacity.",
+                brakes: "Front brakes with ISR 4-piston calipers and rear brakes with AP Racing 2-piston calipers.",
+                tires: "Keizer 10 aluminium wheel rims paired with self-designed 7075 aluminium wheel centres and Hoosier R25B slicks",
+                transmission: "Epicyclic planetary gearbox with a 4.5:1 gear ratio, titanium half-shafts with tripod CV joints, and a machined 7-series aluminium spool with matching spool mounts.",
+                electronics: "RMS PM100DZ motor controller with a robust fault-tolerant IGBT stage and active DC-link discharge, paired with a custom LTC-based BMS featuring efficient self-developed cell balancing and a custom data acquisition system with inverter data logging.",
+                suspension: "A double non-parallel unequal-length wishbone suspension with pullrod actuation, paired with adjustable Ackermann steering geometry, enables precise handling and tunability",
+                ergonomics: "A fixed seat and steering wheel with an adjustable pedal assembly, featuring a resin-infused carbon-fibre seat with PVC padding at the shoulders and base, provide a stable yet ergonomic driver fit"
+            }
+        },
+        achievements: {
+            rank: "6th in Formula Bharat",
+            highlight: "First EV Car",
+            points: "6th in Business Plan presentation",
+            teamPhoto: "./team/team19e.jpeg",
+            awards: [
+                { title: "Overall Rank", value: "#6" },
+                { title: "Business Plan presentation", value: "#6" },
+                { title: "Engineering Design", value: "#4" },
+            ]
+        },
+    members: {
+          board: [],
+          core: [],
+          general: [
+                    { id: 0, name: "Avinash Pawnday", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/avinash-pawnday-011955178/" } },
+                    { id: 1, name: "Dipayan Maji", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/dipayan-maji-15153a149/" } },
+                    { id: 2, name: "Aditya Poddar", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/aditya-poddar-571011123/" } },
+                    { id: 3, name: "Vasudeo Rateria", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/vasudeorateria98/" } },
+                    { id: 4, name: "Pratik Mohanty", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/pratik-mohanty-830a31157/" } },
+                    { id: 5, name: "Anirudh Sivakumar", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/anirudh-sivakumar-35238a180/" } },
+                    { id: 6, name: "Cherukuri Manideep", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/manideepcherukuri1999/" } },
+                    { id: 7, name: "Udit Rathee", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/udit-rathee15/" } },
+                    { id: 8, name: "Satyam Pratap Singh", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 9, name: "T Sri Khyati", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/sri-khyati-694b51158/" } },
+                    { id: 10, name: "Vineet Maheshwari", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/vineet-maheshwari/" } },
+                    { id: 11, name: "Pranshul Pandey", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 12, name: "Sasank Potluri", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 13, name: "Kartikey Saini", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/kartikeysaini" } },
+                    { id: 14, name: "Naman Johri", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/naman-johri-627618165/" } },
+                    { id: 15, name: "Sriram S", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 16, name: "Toshit Jhunjhunwala", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/toshitjhunjhunwala/" } },
+                    { id: 17, name: "Abhinav Sirohi", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "#" } },
+                    { id: 18, name: "Moh", role: "", department: "Electric", quote: "", image: "./fm_sr/place.jpeg", socials: { linkedin: "https://www.linkedin.com/in/mohi-madhu/" } }
+                    ],
+            },
     },
 
     "2018-2019": {
         car: {
             name: "FMX8",
-            competitionCode:"96",
+            competitionCode:"68",
             type:"CV",
             customStat1: { label: "Record Acceleration", value: "4.19s" },
             customStat2: { label: "Power", value: "79 BHP" },
@@ -624,8 +745,8 @@ export const database: Record<string, SeasonData> = {
             displacement:"600cc",
             induction:'53 Nm (torque)',
             powerOutput:'79 BHP',
-            image:'./cars/fm18.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            image:'./cars/fm18_68.jpeg',
+            description: "The FMX8 epitomized our team's speed and strategy, roaring with a Honda CBR 600RR PC37 (2003) engine's 79 BHP and 53Nm torque through a fusion-welded Chromoly 4130 steel tubular spaceframe clad in in-house vacuum-bagged carbon fiber. It blitzed acceleration in 4.19s via independent double-wishbone suspension (pullrod front, pushrod rear) on Öhlins dampers, adjustable Ackermann, 6-speed sequential Drexler LSD (six bias ratios) with electropneumatic titanium-shafted shifting",
             detailedSpecs: {
                 chassis: "Front and rear single-piece tubular space frame made of Chromoly 4130 steel, fusion welded using ER70-S6 filler, with in-house vacuum-bagged carbon fibre bodywork.",
                 body: "",
@@ -641,7 +762,7 @@ export const database: Record<string, SeasonData> = {
             rank: "3rd in Formula Bharat",
             highlight: "1st in Business Plan presentation in Formula Bharat",
             points: "",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team18.jpeg",
             awards: [
                 { title: "Overall Formula Bharat Rank", value: "#5" },
                 { title: "Overall Formula Student Austria Rank", value: "#26" },
@@ -675,8 +796,8 @@ export const database: Record<string, SeasonData> = {
     },
     "2017-2018": {
         car: {
-            name: "FMX6",
-            competitionCode:"01",
+            name: "FMX8",
+            competitionCode:"96",
             type:"CV",
             customStat1: { label: "Torque", value: "57 Nm" },
             customStat2: { label: "Power", value: "79 BHP" },
@@ -684,8 +805,8 @@ export const database: Record<string, SeasonData> = {
             displacement:"",
             induction:'57 Nm (torque)',
             powerOutput:'79 BHP',
-            image:'./cars/fm16.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            image:'./cars/fm18_2.jpg',
+            description: "The FMX8 harnessed our team's meticulous craftsmanship, surging with a Honda CBR600 RR PC37 engine's 79 BHP and 57Nm torque via a fusion-welded Chromoly 4130 steel tubular spaceframe draped in in-house vacuum-bagged carbon fiber. It carved precise lines with independent double-wishbone suspension (pullrod front, pushrod rear) on Öhlins dampers, adjustable Ackermann, 6-speed sequential Drexler LSD (six bias ratios) featuring electropneumatic titanium-shafted shifting, Hoosier slicks on Keizer rims, and ISR/Wilwood floating brakes.",
             detailedSpecs: {
                 chassis: "Front and rear single-piece tubular space frame made of Chromoly 4130 steel, fusion welded using ER70-S6 filler, with in-house vacuum-bagged carbon fibre bodywork.",
                 body: "",
@@ -698,15 +819,15 @@ export const database: Record<string, SeasonData> = {
         }
     },  
         achievements: {
-            rank: "9th in Formula Bharat",
-            highlight: "3rd in Engineering Design in Formula Bharat",
-            points: "5th in Cost Event",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            rank: "26th in FS Austria",
+            highlight: "21 in Cost Event",
+            points: "14th in Engineering Design",
+            teamPhoto: "./team/team17.jpeg",
             awards: [
-                { title: "Overall Formula Bharat Rank", value: "#9" },
-                { title: "Cost and Manufacturing Event", value: "#5" },
-                { title: "Business Plan Presentation", value: "#12" },
-                { title: "Engineering Design", value: "#3" },
+                { title: "Overall FS Austria Rank", value: "#26" },
+                { title: "Cost and Manufacturing Event", value: "#21" },
+                { title: "Business Plan Presentation", value: "#25" },
+                { title: "Engineering Design", value: "#14" },
             ]
         },
         members: { 
@@ -767,7 +888,7 @@ export const database: Record<string, SeasonData> = {
     "2016-2017": {
             car: {
             name: "FMX6",
-            competitionCode:"296",
+            competitionCode:"296/C01",
             type:"CV",
             customStat1: { label: "Torque", value: "57 Nm" },
             customStat2: { label: "Power", value: "79 BHP" },
@@ -776,7 +897,7 @@ export const database: Record<string, SeasonData> = {
             induction:'57 Nm (torque)',
             powerOutput:'79 BHP',
             image:'./cars/fm16.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FMX6 propelled our team onto the global stage, powered by a Honda CBR600 RR PC37 engine's 79 BHP and 57Nm torque through a fusion-welded Chromoly 4130 steel tubular spaceframe wrapped in in-house vacuum-bagged carbon fiber. It tackled tracks with independent double-wishbone suspension (pullrod front, pushrod rear) on Öhlins dampers, adjustable Ackermann, 6-speed sequential Drexler LSD (six bias ratios) with electropneumatic titanium-shafted shifting, Hoosier slicks on Keizer rims, and ISR/Wilwood floating brakes.",
             detailedSpecs: {
                 chassis: "Front and rear single-piece tubular space frame made of Chromoly 4130 steel, fusion welded using ER70-S6 filler, with in-house vacuum-bagged carbon fibre bodywork.",
                 body: "",
@@ -790,14 +911,17 @@ export const database: Record<string, SeasonData> = {
     },  
         achievements: {
             rank: "16th in FS Czech Republic",
-            highlight: "Went to FS Germany and FS Czech Republic",
-            points: "5th in FS Czech Republic",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            highlight: "9th in Formula Bharat",
+            points: "Went to FS Germany and FS Czech Republic",
+            teamPhoto: "./team/team16.jpeg",
             awards: [
                 { title: "Overall FS Czech Republic Rank", value: "#16" },
                 { title: "Overall FS Germany", value: "#58" },
+                { title: "Overall Formula Bharat", value: "#9" },
                 { title: "Cost Event in FS Czech Republic", value: "#5" },
                 { title: "Acceleration in FS Czech Republic", value: "#11" },
+                { title: "Engineering Design in Formula Bharat", value: "#3" },
+                { title: "Business Plan in Formula Bharat", value: "#12" },
             ]
         },
         members: { 
@@ -832,7 +956,7 @@ export const database: Record<string, SeasonData> = {
     "2014-2015": {
         car: {
             name: "FMX4",
-            competitionCode:"77",
+            competitionCode:"77", // have to ask
             type:"CV",
             customStat1: { label: "Torque", value: "57 Nm" },
             customStat2: { label: "Power", value: "79 BHP" },
@@ -841,7 +965,7 @@ export const database: Record<string, SeasonData> = {
             induction:'57 Nm (torque)',
             powerOutput:'79 BHP',
             image:'./cars/fm14.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FMX4 embodied our team's foundational grit, driven by a Honda CBR600 RR (2006) engine's 79 BHP and 57Nm torque via a fusion-welded Chromoly 4130 steel tubular spaceframe with CFRP bodywork. It gripped asphalt with double unequal-length A-arm pushrod suspension (14.86 N/mm front, 26.41 N/mm rear progressive rates), 6-speed sequential Drexler LSD (six bias ratios) featuring electropneumatic titanium-shafted shifting, Hoosier 20.5x7x13 slicks on magnesium-center Keizer 13-inch rims, and ISR/Wilwood floating brakes.",
             detailedSpecs: {
                 chassis: "Front and rear single piece tubular space frame and fusion Welding ER70-S6filler with chromoly 4130 steel and CFRP body",
                 body: "",
@@ -857,12 +981,11 @@ export const database: Record<string, SeasonData> = {
             rank: "60th in FS Germany",
             highlight: "31 in Cost Event in FSG",
             points: "34 in Business Plan Presentation",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team14.jpeg",
             awards: [
-                { title: "Overall FS Czech Republic Rank", value: "#16" },
-                { title: "Overall FS Germany", value: "#58" },
-                { title: "Cost Event in FS Czech Republic", value: "#5" },
-                { title: "Acceleration in FS Czech Republic", value: "#11" },
+                { title: "Overall FS Germany", value: "#60" },
+                { title: "Engineering Design", value: "#58" },
+                { title: "Cost Event in FS Czech Republic", value: "#31" },
             ]
         },
         members: { 
@@ -911,7 +1034,7 @@ export const database: Record<string, SeasonData> = {
             induction:'57 Nm (torque)',
             powerOutput:'79 BHP',
             image:'./cars/fm13.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FMX3 forged our team's early resolve, fueled by a Honda CBR600 RR (2006) engine's 79 BHP and 57Nm torque in a fusion-welded Chromoly 4130 steel tubular spaceframe with CFRP bodywork. It navigated challenges via double unequal-length A-arm pushrod suspension (14.86 N/mm front, 26.41 N/mm rear progressive rates), 6-speed sequential Drexler LSD (six bias ratios) with electropneumatic titanium-shafted shifting, Hoosier 20.5x7x13 slicks on magnesium-center Keizer 13-inch rims, and PS1 Wilwood disc brakes with CNC aluminum uprights.",
             detailedSpecs: {
                 chassis: "Front and rear single piece tubular space frame and fusion Welding ER70-S6filler with chromoly 4130 steel and CFRP body",
                 body: "",
@@ -927,7 +1050,7 @@ export const database: Record<string, SeasonData> = {
             rank: "51st in FS Germany",
             highlight: "2 in Cost Event in FSG",
             points: "49 in Business Plan Presentation",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team13.jpeg",
             awards: [
                 { title: "Overall FS Germany", value: "#51" },
                 { title: "Acceleration", value: "#43" },
@@ -982,7 +1105,7 @@ export const database: Record<string, SeasonData> = {
             induction:'57 Nm (torque)',
             powerOutput:'79 BHP',
             image:'./cars/fm11.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FMX1 ignited our team's motorsport journey, surging with a Honda CBR600 RR (2006) engine's 79 BHP and 57Nm torque through a fusion-welded Chromoly 4130 steel tubular spaceframe clad in FRP bodywork. It mastered dynamics via double unequal-length A-arm pushrod suspension (14.86 N/mm front, 26.41 N/mm rear progressive rates), 6-speed sequential Drexler LSD (six bias ratios) with electropneumatic titanium-shafted shifting.",
             detailedSpecs: {
                 chassis: "Front and rear single piece tubular space frame and fusion Welding ER70-S6filler with chromoly 4130 steel and FRP body",
                 body: "",
@@ -998,7 +1121,7 @@ export const database: Record<string, SeasonData> = {
             rank: "42nd in FS Italy",
             highlight: "16 in Cost Event in FS Italy",
             points: "28 in Business Plan Presentation",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team11.jpeg",
             awards: [
                 { title: "Overall FS Italy", value: "#42" },
                 { title: "Cost Event", value: "#16" },
@@ -1051,7 +1174,7 @@ export const database: Record<string, SeasonData> = {
             induction:'57 Nm (torque)',
             powerOutput:'79 BHP',
             image:'./cars/fm10.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FMX launched our team's legacy, surging with a Honda CBR600 RR (2006) engine's 79 BHP and 57Nm torque through a fusion-welded Chromoly 4130 steel tubular spaceframe clad in FRP bodywork. It pioneered precision via double unequal-length A-arm pushrod suspension (14.86 N/mm front, 26.41 N/mm rear progressive rates), 6-speed sequential Drexler LSD (six bias ratios) with electropneumatic titanium-shafted shifting, Hoosier 20.5x7x13 slicks on magnesium-center Keizer 13-inch rims, and PS1 Wilwood disc brakes on CNC 6351 T6 aluminum uprights..",
             detailedSpecs: {
                 chassis: "Front and rear single piece tubular space frame and fusion Welding ER70-S6filler with chromoly 4130 steel and FRP body",
                 body: "",
@@ -1067,7 +1190,7 @@ export const database: Record<string, SeasonData> = {
             rank: "27TH in FS Austria",
             highlight: "4th in Cost Event",
             points: "17 in Business Plan Presentation",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team10.jpeg",
             awards: [
                 { title: "Overall FS Austria", value: "#27" },
                 { title: "Cost Event", value: "#4" },
@@ -1111,7 +1234,7 @@ export const database: Record<string, SeasonData> = {
     "2009-2010": {
        car: {
             name: "FM09",
-            competitionCode:"96",
+            competitionCode:"146",
             type:"CV",
             customStat1: { label: "FS UK", value: "65"},
             customStat2: { label: "Cost Event", value: "10" },
@@ -1120,7 +1243,7 @@ export const database: Record<string, SeasonData> = {
             induction:'',
             powerOutput:'',
             image:'./cars/FM09.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FM09 blazed our team's trailblazing spirit, powered by a Honda CBR600 F4i engine channeling raw fury through an FEA-optimized mild steel spaceframe (26.7mm x 2.87mm tubes, 2400 Nm/° torsional stiffness) with CNC-bent hoops and TIG welds. It braked to 1.2g with hydraulic Fiero F2 calipers on 260/230mm alloy rotors, gripped via Hoosier 20.5x7x13 slicks on magnesium-center Keizer 13-inch rims, and shifted seamlessly with a custom torque-biasing LSD and chain-sprocket drive.",
             detailedSpecs: {
                 chassis: "FEA-optimized mild steel space frame with CNC-bent roll hoops and TIG welding. Tubes: 26.7 mm × 2.87 mm; Torsional Stiffness: 2400 Nm/°",
                 body: "",
@@ -1136,7 +1259,7 @@ export const database: Record<string, SeasonData> = {
             rank: "65th in FS UK",
             highlight: "10 in Cost Event in FS UK",
             points: "59 in Business Plan Presentation",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team09.jpeg",
             awards: [
                 { title: "Overall FS Germany", value: "#65" },
                 { title: "Engineering Design", value: "#62" },
@@ -1192,7 +1315,7 @@ export const database: Record<string, SeasonData> = {
             induction:'',
             powerOutput:'',
             image:'./cars/FM08.jpg',
-            description: "The FMXXV was a landmark project for our team, marking our transition from combustion to a fully electric powertrain. It featured our first-generation electric motor and battery system, engineered for reliability and efficient power delivery. The monocoque chassis was completely re-designed to accommodate the new architecture, achieving meaningful weight savings while improving torsional rigidity compared to our previous combustion platform..",
+            description: "The FM08 accelerated our team's ascent, channeling the Honda CBR600 F4i's unbridled power through an FEA-optimized mild steel spaceframe with CNC-bent hoops and TIG welds. It halted at 1.2g with hydraulic Fiero F2 calipers clamping 260/230mm alloy rotors, clawed tracks via Hoosier 20.5x7x13 slicks on magnesium-center Keizer 13-inch rims, and biased torque through a custom-housed LSD with chain-sprocket drive.",
             detailedSpecs: {
                 chassis: "FEA-optimized mild steel space frame with CNC-bent roll hoops and TIG welding.",
                 body: "",
@@ -1208,9 +1331,9 @@ export const database: Record<string, SeasonData> = {
             rank: "27th in FS Italy",
             highlight: "17 in Cost Event in FS Italy",
             points: "14 in Business Plan Presentation",
-            teamPhoto: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop",
+            teamPhoto: "./team/team08.jpeg",
             awards: [
-                { title: "Overall FS Germany", value: "#27" },
+                { title: "Overall FS Italy", value: "#27" },
                 { title: "Engineering Design", value: "#29" },
                 { title: "Autocross", value: "#25" },
             ]
@@ -1265,7 +1388,6 @@ export const newspaperClippings = [
 ]
 
 export const magazines = [
-    { month: "October", year: "2025", cover: "./covers/jan.png", websiteUrl: "",pdfUrl: "h./magazine/jan25.pdf" },
     { month: "September", year: "2025", cover: "./covers/september.png",websiteUrl: "https://online.fliphtml5.com/czvap/rrxu/#p=1", pdfUrl: "./magazine/j25.pdf" },
     { month: "August", year: "2025", cover: "./covers/august.png",websiteUrl: "https://online.fliphtml5.com/czvap/kgsd/#p=1", pdfUrl: "./magazine/august25.pdf" },
     {month: "July", year: "2025", cover: "./covers/july.png",websiteUrl: "https://online.fliphtml5.com/czvap/errz/#p=1", pdfUrl: "./magazine/july25.pdf" },
@@ -1296,12 +1418,12 @@ export const subsystems: Subsystem[] = [
     {
         name: "Structures",
         description: "The backbone of the car, ensuring rigidity and safety under extreme loads.",
-        research: "Researching carbon-fiber monocoque manufacturing techniques to reduce weight by 15% while increasing torsional stiffness."
+        research: "Researching carbon-fiber monocoque manufacturing techniques."
     },
     {
         name: "Aerodynamics & Composites",
         description: "Manipulating airflow to generate downforce and minimize drag.",
-        research: "Actuated drs system and aeropackage design optimization and manufacturing.",
+        research: "Actuated Drag Reduction System and aeropackage design optimization and manufacturing.",
 },
     {
         name: "Vehicle Dynamics",
@@ -1314,19 +1436,19 @@ export const subsystems: Subsystem[] = [
         research: "Stepped planetary gearbox design and developing effective sealing and lubrication solutions for high-performance operation."
     },
     {
-        name: "Epowertrain",
-        description: "The heart of our electric future, managing high-voltage energy delivery.",
-        research: "Developing a custom Battery Management System (BMS) with active cell balancing and higher energy density li-ion packing."
+        name: "E-Powertrain",
+        description: "The Electric Powertrain sysbsytem is responsible for designing, optimizing, and managing the complete powertrain architecture of the vehicle.",
+        research: "Researching on hub motors and regenerative breaking."
     },
     {
         name: "Electronics & Control Systems",
-        description: "The nervous system connecting sensors, data logging, and driver inputs.",
-        research: "Implementing a CAN-bus based telemetry system with real-time cloud data upload and traction control algorithms."
+        description: "Manages all vehicle-level electronics, including sensor acquisition, safety interlocks, HV/LV monitoring, and CAN-based coordination.",
+        research: "Currently researching custom on AMS design and advanced data acquisition architecture"
     },
     {
         name: "Driverless",
         description: "Pioneering autonomous racing with advanced perception and path planning.",
-        research: "Enhancing LiDAR and camera sensor fusion for cone detection and implementing Model Predictive Control (MPC) for path tracking."
+        research: "Enhancing Model-Based Reinforcement Learning with Closed Form Continuous Time Neural Networks for High-Speed Autonomous Vehicle Dynamics",
     },
     {
         name: "Management",

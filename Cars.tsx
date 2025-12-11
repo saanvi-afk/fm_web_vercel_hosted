@@ -178,17 +178,6 @@ export default function Cars() {
                                     {stats.description}
                                 </p>
                             </div>
-
-                            <div className="flex gap-4">
-                                <div className="bg-black/30 px-6 py-3 rounded-lg border border-white/5">
-                                    <div className="text-xs text-gray-500 uppercase font-bold">Design Iterations</div>
-                                    <div className="text-xl text-white font-mono">142</div>
-                                </div>
-                                <div className="bg-black/30 px-6 py-3 rounded-lg border border-white/5">
-                                    <div className="text-xs text-gray-500 uppercase font-bold">Testing Hours</div>
-                                    <div className="text-xl text-white font-mono">500+</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

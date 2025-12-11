@@ -142,9 +142,13 @@ export default function Team() {
                     <a href={selectedMember.socials.linkedin} className="group flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 hover:border-blue-500 hover:bg-blue-500/10 transition-all">
                         <i className="fab fa-linkedin-in text-gray-400 group-hover:text-blue-500"></i>
                     </a>
-                    <a href={selectedMember.socials.instagram} className="group flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 hover:border-pink-500 hover:bg-pink-500/10 transition-all">
-                        <i className="fab fa-instagram text-gray-400 group-hover:text-pink-500"></i>
+                    {selectedMember.socials.phonenumber && (
+                    <a href={`tel:${selectedMember.socials.phonenumber}`}
+                        className="group flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 hover:border-blue-500 hover:bg-blue-500/10 transition-all"
+                    >
+                    <i className="fas fa-phone text-gray-400 group-hover:text-blue-500"></i>
                     </a>
+                    )}
                 </div>
             </div>
           </div>
