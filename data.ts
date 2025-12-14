@@ -282,17 +282,17 @@ export const database: Record<string, SeasonData> = {
             name: "FMXXV",
             competitionCode: "E27",
             type: "EV",
-            customStat1: { label: "Voltage", value: "600V" },
-            customStat2: { label: "Weight", value: "255kg" },
+            customStat1: { label: "Torque", value: "140Nm" },
+            customStat2: { label: "Power", value: "80KW" },
             motor: "Liquid Cooled EMRAX 208 HV",
-            battery: "6.6 kWh Custom Pack",
-            voltage: "600V MAX",
+            battery: "6.6 kWh net energy",
+            voltage: "",
             image:'./cars/fm25.jpg',
-            description: "The E27 marks a pivotal evolution in our engineering philosophy, utilizing a tubular space frame of AISI 4130 steel for optimal structural integrity. It features a custom electropneumatic shifting system and a highly efficient electric powertrain powered by Molicel P42A cells.",
+            description: "FMXXV is a cutting-edge Formula Student EV featuring an AISI 1018 tubular spaceframe, CFRP body panels, liquid-cooled EMRAX 208 motor with 6.6 kWh Molicel battery, ISR/AP calipers, Hoosier slicks on Keizer rims, Drexler LSD transmission, custom electronics, double-wishbone suspension, and ergonomic fixed-seat design.",
             detailedSpecs: {
-                chassis: "CFRP Monocoque",
+                chassis: "Tubular Spaceframe, Manufactured using AISI 1018 STEEL",
                 body: "Vacuum assisted resin infused CFRP panels",
-                powertrain: "4x AMK DD5-14-10 PO W-55",
+                powertrain: "Liquid Cooled EMRAX 208 HV, Molicel P42A Cells, 106S 4P Cells Configuration, 6.6 kWh net energy",
                 brakes: "Front: ISR4-piston calipers Rear : AP Racing 2-piston calipers",
                 tires: "Keizer 10 aluminium wheel rims paired with self-designed 7075 aluminium wheel centres and Hoosier R25B slicks",
                 transmission: "A Drexler LSD with three torque-biasing options, paired with a 5.818 final drive and EN-24 halfshafts, delivers strong traction and reliable power transfer",
@@ -310,6 +310,7 @@ export const database: Record<string, SeasonData> = {
                 { title: "Overall Rank", value: "#3" },
                 { title: "Cost & Manufacturing", value: "#3" },
                 { title: "Engineering Design", value: "#3" },
+                 {title: "Business Plan Presentation", value: "#8" },
             ]
         },
         members: {
@@ -437,7 +438,7 @@ export const database: Record<string, SeasonData> = {
             awards: [
                 { title: "Cost & Manufacturing", value: "#6" },
                 { title: "Acceleration ", value: "#7" },
-                { title: "Business Plan ", value: "#18" },
+                { title: "Business Plan Presentation", value: "#18" },
 
             ]
         },
