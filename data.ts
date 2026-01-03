@@ -208,9 +208,9 @@ export const database: Record<string, SeasonData> = {
         },
         members: {
             board: [
-                { id: 0, name: "Amogha Rao", role: "Team Captain", department: "Management", quote: "", image: "./fm_sr/amogha.jpg", socials: { linkedin: "https://www.linkedin.com/in/amogha-rao-ar/",phonenumber:+919986507801 } },
-                { id: 1, name: "Vandana Malhotra", role: "Mechanical Head", department: "Mechanical", quote: "", image: "./fm_sr/vandana.jpg", socials: { linkedin: "https://www.linkedin.com/in/vandana-malhotra-517999250/", phonenumber : +917700904153} },
-                { id: 2, name: "Krit Gupta", role: "Electrical Head", department: "Electrical", quote: "", image: "./fm_sr/krit.jpg", socials: { linkedin: "https://www.linkedin.com/in/krit-gupta-a939a1284/", phonenumber :+918073599506 } }
+                { id: 0, name: "Amogha Rao", role: "Team Manager", department: "Team Manager", quote: "", image: "./fm_sr/amogha.jpg", socials: { linkedin: "https://www.linkedin.com/in/amogha-rao-ar/",phonenumber:+919986507801 } },
+                { id: 1, name: "Vandana Malhotra", role: "Mechanical Head", department: "Mechanical Head", quote: "", image: "./fm_sr/vandana.jpg", socials: { linkedin: "https://www.linkedin.com/in/vandana-malhotra-517999250/", phonenumber : +917700904153} },
+                { id: 2, name: "Krit Gupta", role: "Electrical Head", department: "Electrical Head", quote: "", image: "./fm_sr/krit.jpg", socials: { linkedin: "https://www.linkedin.com/in/krit-gupta-a939a1284/", phonenumber :+918073599506 } }
             ],
             core: [
                 { id: 0, name: "Ratish A.M", role: "Structures Lead", department: "Structures", quote: "", image: "./fm_sr/ratish.jpg", socials: { linkedin: "https://www.linkedin.com/in/ratish-a-m-419996219/" } },
@@ -241,7 +241,7 @@ export const database: Record<string, SeasonData> = {
                 { id: 15, name: "Devadathan R Menon", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/dev.jpg", socials: { linkedin: "https://www.linkedin.com/in/devadathan-r-menon-705440360/" } },
                 { id: 16, name: "Saksham Agrawal", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/saksham.jpg", socials: { linkedin: "https://www.linkedin.com/in/saksham-agrawal-462698311/" } },
                 { id: 17, name: "Nitha B Venugopal", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/nitha.jpg", socials: { linkedin: "https://www.linkedin.com/in/nitha-b-6329742b8/" } },
-                { id: 18, name: "Ishan Panchal", role: "", department: "E-Powertrain", quote: "", image: "./fm_sr/ishaan.jpeg", socials: { linkedin: "https://www.linkedin.com/in/ishan-panchal-b839672a9/" } },
+                { id: 18, name: "Ishan Panchal", role: "", department: "E-Powertrain", quote: "", image: "./fm_sr/ishaan.jpg", socials: { linkedin: "https://www.linkedin.com/in/ishan-panchal-b839672a9/" } },
                 { id: 19, name: "raghunandhan prakash", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_sr/raghu.jpg", socials: { linkedin: "https://www.linkedin.com/in/raghunandhan-prakash-134867254/" } },
                 { id: 20, name: "ANUSHA SAMAL", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_jr/anusha.jpg", socials: { linkedin: "https://in.linkedin.com/in/anusha-samal-2a8296256" } },
                 { id: 21, name: "ADIT JINDAL", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_jr/adit.jpg", socials: { linkedin: "https://www.linkedin.com/in/adit-jindal-58098b286/" } },
@@ -260,7 +260,6 @@ export const database: Record<string, SeasonData> = {
                 { id: 35, name: "Ajith BALAKRISHNAN", role: "", department: "Driverless", quote: "NA", image: "./fm_sr/ajith.jpg", socials: { linkedin: "https://www.linkedin.com/in/ajith-b-a8b9b9280/" } },
                 { id: 36, name: "KRISHNA GERA", role: "", department: "Driverless", quote: "Junior Engineer", image: "./fm_jr/krishna.jpg", socials: { linkedin: "https://www.linkedin.com/in/krishna-gera-99a447321/" } },
                 { id: 37, name: "RAHEE PRADEEP", role: "", department: "Driverless", quote: "Junior Engineer", image: "./fm_jr/rahee.jpg", socials: { linkedin: "https://www.linkedin.com/in/rahee-pradeep-6068482b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" } },
-                { id: 38, name: "TUSHAR A D RAO", role: "", department: "Driverless", quote: "Junior Engineer", image: "./fm_jr/tushar.jpg", socials: { linkedin: "https://www.linkedin.com/in/tushar-rao-7b419a254/" } },
                 { id: 39, name: "SARANGAN SRINIVASAN", role: "", department: "Driverless", quote: "Junior Engineer", image: "./fm_jr/saranagan.jpg", socials: { linkedin: "https://www.linkedin.com/in/sarangan-srinivasan-8abbb9313/" } },
                 { id: 40, name: "Rovin Castelino", role: "", department: "Driverless", quote: "Junior Engineer", image: "./fm_jr/rovin.jpg", socials: { linkedin: "https://www.linkedin.com/in/rovincastelino12/" } },
                 { id: 41, name: "Mohammed Amaan", role: "", department: "Driverless", quote: "Junior Engineer", image: "./fm_jr/amaan.jpg", socials: { linkedin: "https://www.linkedin.com/in/mohammed---amaan/" } },
