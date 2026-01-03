@@ -241,7 +241,7 @@ export const database: Record<string, SeasonData> = {
                 { id: 15, name: "Devadathan R Menon", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/dev.jpg", socials: { linkedin: "https://www.linkedin.com/in/devadathan-r-menon-705440360/" } },
                 { id: 16, name: "Saksham Agrawal", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/saksham.jpg", socials: { linkedin: "https://www.linkedin.com/in/saksham-agrawal-462698311/" } },
                 { id: 17, name: "Nitha B Venugopal", role: "", department: "Transmission", quote: "Junior Engineer", image: "./fm_jr/nitha.jpg", socials: { linkedin: "https://www.linkedin.com/in/nitha-b-6329742b8/" } },
-                { id: 18, name: "Ishan Panchal", role: "", department: "E-Powertrain", quote: "", image: "./fm_sr/ishaan.jpg", socials: { linkedin: "https://www.linkedin.com/in/ishan-panchal-b839672a9/" } },
+                { id: 18, name: "Ishan Panchal", role: "", department: "E-Powertrain", quote: "", image: "./fm_sr/ishaan1.jpg", socials: { linkedin: "https://www.linkedin.com/in/ishan-panchal-b839672a9/" } },
                 { id: 19, name: "raghunandhan prakash", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_sr/raghu.jpg", socials: { linkedin: "https://www.linkedin.com/in/raghunandhan-prakash-134867254/" } },
                 { id: 20, name: "ANUSHA SAMAL", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_jr/anusha.jpg", socials: { linkedin: "https://in.linkedin.com/in/anusha-samal-2a8296256" } },
                 { id: 21, name: "ADIT JINDAL", role: "", department: "E-Powertrain", quote: "Junior Engineer", image: "./fm_jr/adit.jpg", socials: { linkedin: "https://www.linkedin.com/in/adit-jindal-58098b286/" } },
@@ -416,7 +416,7 @@ export const database: Record<string, SeasonData> = {
             displacement:"600cc",
             induction:'53 Nm (torque)',
             powerOutput:'79 BHP',
-            image:'./cars/fm23.jpg',
+            image:'./cars/fm231.jpg',
             description:"The FM23 showcased our team's relentless drive for performance, fueled by a Honda CBR 600RR PC37 (2003) engine pumping 79 BHP and 57Nm of torque through a robust AISI 1018 steel tubular spaceframe. Clad in resin-infused CFRP bodywork, it gripped tracks with double wishbone suspension (front pullrod, rear pushrod), adjustable Ackermann, Drexler LSD (31Nm preload), and Hoosier R25B slicks on Keizer rims.",
             detailedSpecs: {
                 chassis: "Tubular Spaceframe, Manufactured using AISI 1018 STEEL",
