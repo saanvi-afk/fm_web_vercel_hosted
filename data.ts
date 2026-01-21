@@ -1,13 +1,13 @@
 // --- GLOBAL APP CONFIGURATION ---
 export const appConfig = {
     recruitment: {
-        isOpen: false, // Set to TRUE so the Apply Now button works immediately
+        isOpen: true, // Set to TRUE so the Apply Now button works immediately
         // To link to Excel: Create a Google Sheet -> Extensions -> Apps Script -> Deploy as Web App -> Paste URL here
         // The JoinForm component is set up to POST data to this URL
         googleSheetScriptUrl: "https://script.google.com/macros/s/AKfycbxTotggT69NMKX2CiOdf75KUiwqYHqspveSXMfvEQEPkXr5GscS_vXivACzartVja-F/exec",
     },
     sponsorship: {
-        // Link to your external form (Google Form, Typeform, etc.)
+        // Link to your external form (Google Form, Typeform, etc.)4
         contactFormUrl: "https://forms.gle/KQ7KqYaEPTQUBWtT8"
     },
     media: {
@@ -1365,7 +1365,7 @@ export const sponsors: Sponsor[] = [
     { name: "ADOR", url: "https://www.adorindia.com/", image:'./sponsors/ador_logo.png', description: "" },
      { name: "AMADA", url: "https://www.amadaindia.co.in/", image:'./sponsors/amada.png', description: "" },
      { name: "SIKA", url: "https://ind.sika.com/",image:'./sponsors/sika_logo.png', description: "" },
-     {name : "BENDER", url:"",image:"./sponsors/bender.png",description:""},
+     {name : "BENDER", url:"https://www.bender-in.com/",image:"./sponsors/bender.png",description:""},
     { name: "FLUKE", url: "https://www.fluke.com/en-in", image:'./sponsors/fluke_logo.png', description: "" },
     { name: "RHEINMETALL", url: "https://www.rheinmetall.com/en", image:'./sponsors/rheinmetall.png', description: "" },
     {name : "CHASSISSIM", url:"https://www.chassissim.com/",image:"./sponsors/chassism_logo.png",description:""},
@@ -1382,7 +1382,7 @@ export const sponsors: Sponsor[] = [
     {name : "MEKUVA", url:"https://mekuva.com/",image:"./sponsors/mekuva.png",description:""},
     {name : "FLAUTA", url:"https://www.flautacustoms.com/",image:"./sponsors/flauta.png",description:""},
     {name : "STATUS FURNITURE", url:"https://statusfurniture.in/",image:"./sponsors/status.png",description:""},
-    {name : "PPI", url:"",image:"./sponsors/ppi.png",description:""},
+    {name : "PPI", url:"https://www.ppiadhesiveproducts.com/",image:"./sponsors/ppi.png",description:""},
     {name : "AFLON ENGINEERING", url:"https://www.aflonindia.com/",image:"./sponsors/aflon.png",description:""},
     {name : "BANGALORE MIRROR", url:"https://bangaloremirror.indiatimes.com/",image:"./sponsors/blr.png",description:""},
     {name : "INSTITUITIONS INNOVATION COUNCIL", url:"https://iic.mic.gov.in/assets/html/index.html",image:"./sponsors/iic.png",description:""},

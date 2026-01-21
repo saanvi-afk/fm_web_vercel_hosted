@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { subsystems, appConfig } from './data';
 
+const departmentOptions = [
+  "Mechanical",
+  "Electrical",
+  "Research",
+  "Management",
+  "Driverless"
+]
+
+
 export default function JoinForm({ onNavigate }: { onNavigate: (page: string) => void }) {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -149,16 +158,28 @@ export default function JoinForm({ onNavigate }: { onNavigate: (page: string) =>
                 </div>
 
                 {/* Department Selection */}
-                <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">Preferred Department</label>
-                    <select name="department" onChange={handleChange} required className="w-full bg-black border border-neutral-700 rounded-xl px-4 py-3 text-white focus:border-red-600 focus:outline-none transition-colors appearance-none cursor-pointer">
+                {/* Department Selection */}
+                    <div className="space-y-2">
+                    <label className="text-xs font-bold text-gray-400 uppercase tracking-wider">
+                        Preferred Department
+                    </label>
+
+                    <select
+                        name="department"
+                        onChange={handleChange}
+                        required
+                        className="w-full bg-black border border-neutral-700 rounded-xl px-4 py-3 text-white focus:border-red-600 focus:outline-none transition-colors appearance-none cursor-pointer"
+                    >
                         <option value="">Select a department...</option>
-                        {subsystems.filter(s => s.name !== 'Management').map(s => (
-                            <option key={s.name} value={s.name}>{s.name}</option>
+
+                        {departmentOptions.map(dep => (
+                        <option key={dep} value={dep.toLowerCase()}>
+                            {dep}
+                        </option>
                         ))}
-                         <option value="Management">Management</option>
                     </select>
-                </div>
+                    </div>
+
 
                 {/* Reason / Motivation */}
                 <div className="space-y-2">
