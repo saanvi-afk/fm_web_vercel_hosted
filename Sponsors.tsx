@@ -29,7 +29,7 @@ export default function Sponsors() {
                             Detailed insights into our team's achievements, media reach, and the various tiers of sponsorship benefits available for your brand.
                         </p>
                         <a 
-                            href="./magazine/SPONSORSHIP BROCHURE 2025-26.pdf" 
+                            href="./magazine/brochure.pdf" 
                             className="inline-flex items-center gap-3 text-white font-bold uppercase tracking-widest group-hover:text-red-500 transition-colors"
                         >
                             Download PDF <i className="fas fa-arrow-right"></i>
