@@ -1,7 +1,7 @@
 // --- GLOBAL APP CONFIGURATION ---
 export const appConfig = {
     recruitment: {
-        isOpen: true, // Set to TRUE so the Apply Now button works immediately
+        isOpen: false, // Set to TRUE so the Apply Now button works immediately
         // To link to Excel: Create a Google Sheet -> Extensions -> Apps Script -> Deploy as Web App -> Paste URL here
         // The JoinForm component is set up to POST data to this URL
         googleSheetScriptUrl: "https://script.google.com/macros/s/AKfycbxTotggT69NMKX2CiOdf75KUiwqYHqspveSXMfvEQEPkXr5GscS_vXivACzartVja-F/exec",
