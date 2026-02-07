@@ -289,7 +289,7 @@ export const database: Record<string, SeasonData> = {
             image:'./cars/fm25.jpg',
             description: "FMXXV is a cutting-edge Formula Student EV featuring an AISI 1018 tubular spaceframe, CFRP body panels, liquid-cooled EMRAX 208 motor with 6.6 kWh Molicel battery, ISR/AP calipers, Hoosier slicks on Keizer rims, Drexler LSD transmission, custom electronics, double-wishbone suspension, and ergonomic fixed-seat design.",
             detailedSpecs: {
-                chassis: "Tubular Spaceframe, Manufactured using AISI 1018 STEEL",
+                chassis: "Tubular Spaceframe, Manufactured using AISI 4130 STEEL",
                 body: "Vacuum assisted resin infused CFRP panels",
                 powertrain: "Liquid Cooled EMRAX 208 HV, Molicel P42A Cells, 106S 4P Cells Configuration, 6.6 kWh net energy",
                 brakes: "Front: ISR4-piston calipers Rear : AP Racing 2-piston calipers",
