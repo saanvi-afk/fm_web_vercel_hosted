@@ -115,7 +115,7 @@ export default function Landing({ onNavigate }: { onNavigate: (page: string) => 
                 muted 
                 playsInline
                 className="w-full h-full object-cover opacity-100"
-                src="./video/carvid.mp4"
+                src="/video/carvid.mp4"
              >
              </video>
              {/* Simple dark overlay to ensure text contrast without hiding video */}
@@ -294,7 +294,7 @@ export default function Landing({ onNavigate }: { onNavigate: (page: string) => 
                 muted 
                 playsInline
                 className="w-full h-full object-cover opacity-85"
-                src="./video/cadvid.mp4"
+                src="/video/cadvid.mp4"
              >
              </video>
              {/* Simple dark overlay to ensure text contrast without hiding video */}
